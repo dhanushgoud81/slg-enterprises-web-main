@@ -167,7 +167,7 @@ const Index = () => {
                         <img
                           src={image.src}
                           alt={image.alt}
-                          className="rounded-lg shadow-2xl w-full h-96 object-cover"
+                          className="rounded-lg shadow-2xl w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] object-cover"
                         />
                       </CarouselItem>
                     ))}
