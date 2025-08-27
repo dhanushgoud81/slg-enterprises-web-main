@@ -1,7 +1,9 @@
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowLeft, MessageCircle } from 'lucide-react';
+import { CheckCircle, ArrowLeft, MessageCircle, Building2, Users, Clock, Shield, Award } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
@@ -9,45 +11,185 @@ import ScrollToTop from '../components/ScrollToTop';
 const serviceData = {
   manpower: {
     title: 'Manpower Supply',
-    description: 'Skilled and reliable workforce for your business needs. We provide trained professionals across various industries with comprehensive background verification.',
+    description: 'Skilled and reliable workforce for your business needs. We provide trained professionals across various industries with comprehensive background verification, skill assessment, and flexible staffing solutions.',
     image: '/images/manpower.jpeg',
-    features: ['Skilled Workers', 'Background Verification', 'Flexible Contracts', '24/7 Support']
+    features: ['Skilled Workers', 'Background Verification', 'Flexible Contracts', 'Industry Expertise', '24/7 Support'],
+    detailedDescription: 'Our manpower supply service is designed to meet the diverse staffing needs of businesses across various industries. We provide pre-screened, trained professionals who are ready to contribute to your organization immediately.',
+    benefits: [
+      'Reduced hiring time and costs',
+      'Access to pre-trained professionals',
+      'Flexible staffing solutions',
+      'Comprehensive background verification',
+      'Ongoing support and management'
+    ],
+    industries: ['Manufacturing', 'Healthcare', 'Technology', 'Retail', 'Logistics', 'Construction'],
+    testimonial: {
+      quote: "SLG Enterprises has been our trusted partner for manpower supply. Their professional approach and quality staff have significantly contributed to our operational efficiency.",
+      author: "Rajesh Kumar",
+      position: "HR Manager",
+      company: "Premier Energies"
+    }
   },
   landscaping: {
     title: 'Landscaping',
-    description: 'Professional garden and outdoor space maintenance services. Creating beautiful, sustainable landscapes for commercial and residential properties.',
+    description: 'Professional garden and outdoor space maintenance services. Creating beautiful, sustainable landscapes for commercial and residential properties with eco-friendly practices and seasonal maintenance plans.',
     image: '/images/landscaping.jpeg',
-    features: ['Garden Design', 'Maintenance', 'Irrigation Systems','More']  
+    features: ['Garden Design', 'Maintenance', 'Irrigation Systems', 'Seasonal Care', 'Eco-friendly Practices'],
+    detailedDescription: 'Transform your outdoor spaces with our comprehensive landscaping services. From initial design to ongoing maintenance, we create and maintain beautiful, sustainable landscapes that enhance your property value.',
+    benefits: [
+      'Professional landscape design',
+      'Regular maintenance schedules',
+      'Eco-friendly practices',
+      'Seasonal care programs',
+      'Irrigation system management'
+    ],
+    industries: ['Commercial Properties', 'Residential Complexes', 'Hotels', 'Corporate Offices', 'Healthcare Facilities'],
+    testimonial: {
+      quote: "The landscaping services provided by SLG are exceptional. Their attention to detail and eco-friendly approach has transformed our property.",
+      author: "Priya Sharma",
+      position: "Facility Manager",
+      company: "MGRM Medicare"
+    }
   },
   housekeeping: {
     title: 'Housekeeping',
-    description: 'Comprehensive cleaning and maintenance services for offices, hospitals, hotels, and residential complexes with trained cleaning professionals.',
+    description: 'Comprehensive cleaning and maintenance services for offices, hospitals, hotels, and residential complexes with trained cleaning professionals, eco-friendly products, and customized cleaning schedules.',
     image: '/images/housekeeping.jpeg',
-    features: ['Deep Cleaning', 'Regular Maintenance', 'Sanitization','More']
+    features: ['Deep Cleaning', 'Regular Maintenance', 'Sanitization', 'Eco-friendly Products', 'Customized Schedules'],
+    detailedDescription: 'Maintain pristine environments with our professional housekeeping services. Our trained staff uses eco-friendly products and follows strict protocols to ensure the highest standards of cleanliness and hygiene.',
+    benefits: [
+      'Professional cleaning staff',
+      'Eco-friendly cleaning products',
+      'Customized cleaning schedules',
+      'Specialized sanitization',
+      'Quality assurance programs'
+    ],
+    industries: ['Healthcare', 'Hotels', 'Corporate Offices', 'Educational Institutions', 'Residential Complexes'],
+    testimonial: {
+      quote: "The housekeeping and maintenance services provided by SLG are exceptional. Their attention to detail and reliability make them an invaluable partner.",
+      author: "Anil Reddy",
+      position: "Operations Director",
+      company: "Multisorb Technologies"
+    }
   },
   security: {
     title: 'Security',
-    description: 'Trained security personnel for your premises. Professional security guards with proper training and certification for complete safety.',
+    description: 'Trained security personnel for your premises. Professional security guards with proper training, certification, and 24/7 monitoring capabilities for complete safety and peace of mind.',
     image: '/images/security.jpeg',
-    features: ['24/7 Security', 'Trained Guards', 'Access Control','More']
+    features: ['24/7 Security', 'Trained Guards', 'Access Control', 'Emergency Response', 'Monitoring Systems'],
+    detailedDescription: 'Ensure the safety and security of your premises with our professional security services. Our trained guards are equipped with the latest security protocols and provide round-the-clock protection.',
+    benefits: [
+      '24/7 security coverage',
+      'Trained and certified guards',
+      'Access control systems',
+      'Emergency response protocols',
+      'Regular security audits'
+    ],
+    industries: ['Corporate Offices', 'Manufacturing Units', 'Healthcare Facilities', 'Educational Institutions', 'Residential Complexes'],
+    testimonial: {
+      quote: "SLG's security services have provided us with peace of mind. Their professional guards and quick response times are exceptional.",
+      author: "Suresh Kumar",
+      position: "Security Manager",
+      company: "Leverage Science Tech"
+    }
   },
   'office-boy': {
     title: 'Office Boy',
-    description: 'Administrative support and office assistance services. Reliable support staff for daily office operations and administrative tasks.',
+    description: 'Administrative support and office assistance services. Reliable support staff for daily office operations, document handling, and administrative tasks with professional conduct and efficiency.',
     image: '/images/office-boy.jpeg',
-    features: ['Administrative Support', 'Document Handling', 'Office Assistance','More']
+    features: ['Administrative Support', 'Document Handling', 'Office Assistance', 'Professional Conduct', 'Efficient Service'],
+    detailedDescription: 'Streamline your office operations with our professional office support services. Our trained staff handles various administrative tasks efficiently, allowing your core team to focus on business priorities.',
+    benefits: [
+      'Professional administrative support',
+      'Document handling and filing',
+      'Office maintenance assistance',
+      'Professional conduct and etiquette',
+      'Flexible scheduling options'
+    ],
+    industries: ['Corporate Offices', 'Educational Institutions', 'Healthcare Facilities', 'Legal Firms', 'Financial Institutions'],
+    testimonial: {
+      quote: "The office support staff from SLG are professional and efficient. They've significantly improved our office operations.",
+      author: "Meera Patel",
+      position: "Office Manager",
+      company: "Ramky Group"
+    }
   },
   'non-tech': {
     title: 'Non-Tech Team',
-    description: 'Support staff for various operational needs. Dedicated teams for manufacturing, logistics, and other non-technical requirements.',
+    description: 'Support staff for various operational needs. Dedicated teams for manufacturing, logistics, warehouse operations, and other non-technical requirements with specialized training.',
     image: '/images/non-tech.jpeg',
-    features: ['Operational Support', 'Manufacturing Help', 'Logistics Team','More']
+    features: ['Operational Support', 'Manufacturing Help', 'Logistics Team', 'Warehouse Operations', 'Specialized Training'],
+    detailedDescription: 'Our non-tech team provides essential support for manufacturing, logistics, and operational activities. These skilled workers are trained in specific industry requirements and safety protocols to ensure efficient operations.',
+    benefits: [
+      'Specialized training for specific roles',
+      'Safety protocol compliance',
+      'Operational efficiency',
+      'Flexible workforce solutions',
+      'Quality control support'
+    ],
+    industries: ['Manufacturing', 'Logistics', 'Warehousing', 'Construction', 'Agriculture', 'Textiles'],
+    testimonial: {
+      quote: "SLG's non-tech team has been instrumental in our manufacturing operations. Their specialized training and dedication are outstanding.",
+      author: "Vikram Singh",
+      position: "Production Manager",
+      company: "Premier Energies"
+    }
   },
 };
+
+const clients = [
+  { 
+    name: 'Premier Energies', 
+    industry: 'Solar Energy',
+    logo: '/images/clients%20logos/premier-energieslogo.png'
+  },
+  { 
+    name: 'Ramky Group', 
+    industry: 'Infrastructure & Waste Management',
+    logo: '/images/clients%20logos/Ramk_group.png'
+  },
+  { 
+    name: 'MGRM Medicare', 
+    industry: 'Healthcare & Pharmaceuticals',
+    logo: '/images/clients%20logos/MGRM%20Medicare%20ltd.png'
+  },
+  { 
+    name: 'Multisorb Technologies', 
+    industry: 'Technology & Manufacturing',
+    logo: '/images/clients%20logos/multisorb-filtration-group-logo.png'
+  },
+  { 
+    name: 'Leverage Science Tech', 
+    industry: 'Scientific Equipment & Research',
+    logo: '/placeholder.svg'
+  }
+];
 
 const ServiceDetails = () => {
   const { serviceId } = useParams();
   const service = serviceId ? serviceData[serviceId] : null;
+
+  // Add custom CSS for scrolling animation
+  React.useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-scroll {
+        animation: scroll 20s linear infinite;
+      }
+      .animate-scroll:hover {
+        animation-play-state: paused;
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
 
   if (!service) {
     return (
@@ -66,74 +208,269 @@ const ServiceDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-2 flex flex-col items-center">
+    <>
       <ScrollToTop />
       <Navigation />
-      {/* Banner */}
-      <div className="w-full max-w-3xl rounded-t-2xl bg-gradient-to-r from-corporate-blue to-blue-400 shadow-lg mb-0">
-        <h1 className="text-4xl md:text-5xl font-bold text-white py-10 px-6 text-center drop-shadow-lg">{service.title}</h1>
-      </div>
-      {/* Card */}
-      <div className="w-full max-w-3xl bg-white rounded-b-2xl shadow-lg p-8 md:p-14 -mt-2 flex flex-col md:flex-row gap-10 items-center min-h-[480px]">
-        <img src={service.image} alt={service.title} className="rounded-xl shadow-md w-full max-w-xs h-64 object-cover mb-4 md:mb-0" />
-        <div className="flex-1 flex flex-col items-center md:items-start">
-          <p className="text-lg text-corporate-grey mb-8 text-center md:text-left">{service.description}</p>
-          {/* Features */}
-          {service.features && (
-            <ul className="mb-8 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-              {service.features.map((feature, idx) => (
-                <li key={idx} className="flex items-center gap-2 text-green-700 font-medium">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          )}
-          <Button
-            size="lg"
-            variant="outline"
-            className="bg-green-500 text-white hover:bg-green-600 font-semibold flex items-center gap-2 w-full justify-center shadow-md text-lg mb-4"
-            onClick={() => window.open('https://wa.me/918106206381', '_blank')}
-          >
-            <MessageCircle className="w-6 h-6" /> Contact on WhatsApp
-          </Button>
+      
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-corporate-blue via-blue-600 to-corporate-blue-dark text-white py-20 overflow-hidden">
+        {/* 3D Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white bg-opacity-10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-400 bg-opacity-20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
         </div>
-      </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in transform hover:scale-105 transition-transform duration-500">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-2xl">
+                {service.title}
+              </h1>
+              <p className="text-xl md:text-2xl mb-4 text-blue-100 font-light">
+                Professional Solutions for Your Business
+              </p>
+              <p className="text-lg mb-8 text-blue-200 max-w-lg leading-relaxed">
+                {service.description}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  size="lg"
+                  className="bg-white text-corporate-blue hover:bg-gray-100 font-semibold transform hover:scale-105 hover:shadow-2xl transition-all duration-300 rounded-xl"
+                  onClick={() => window.open('https://wa.me/918106206381', '_blank')}
+                >
+                  <MessageCircle className="ml-2 h-5 w-5" />
+                  Get Quote on WhatsApp
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-corporate-blue font-semibold transform hover:scale-105 transition-all duration-300 rounded-xl"
+                >
+                  <Link to="/services">
+                    View All Services
+                  </Link>
+                </Button>
+              </div>
+            </div>
+            <div className="relative group">
+              <img 
+                src={service.image} 
+                alt={service.title} 
+                className="rounded-2xl shadow-2xl w-full h-96 object-cover transform group-hover:scale-105 group-hover:rotate-1 transition-all duration-500" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* Why Choose This Service Section */}
-      <div className="w-full max-w-3xl bg-white rounded-2xl shadow-lg mt-10 p-8 md:p-12 flex flex-col items-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-corporate-blue mb-4 text-center">Why Choose {service.title}?</h2>
-        <ul className="text-lg text-corporate-grey mb-4 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-          <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-blue-500" /> Reliable and experienced professionals</li>
-          <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-blue-500" /> Tailored solutions for your needs</li>
-          <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-blue-500" /> Excellent customer support</li>
-          <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-blue-500" /> Proven track record of client satisfaction</li>
-        </ul>
-      </div>
+      {/* Service Details */}
+      <section className="py-20 bg-gradient-to-br from-white via-blue-50 to-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Service Description */}
+            <div className="animate-fade-in">
+              <h2 className="text-3xl md:text-4xl font-bold text-corporate-grey-dark mb-6 bg-gradient-to-r from-corporate-blue to-blue-600 bg-clip-text text-transparent">
+                About Our {service.title} Service
+              </h2>
+              <p className="text-lg text-corporate-grey mb-6 leading-relaxed">
+                {service.detailedDescription}
+              </p>
+              
+              {/* Features */}
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold text-corporate-grey-dark mb-4">Key Features</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {service.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-3 text-corporate-grey">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Industries */}
+              <div>
+                <h3 className="text-xl font-semibold text-corporate-grey-dark mb-4">Industries We Serve</h3>
+                <div className="flex flex-wrap gap-2">
+                  {service.industries.map((industry, idx) => (
+                    <span key={idx} className="px-3 py-1 bg-corporate-blue text-white rounded-full text-sm font-medium">
+                      {industry}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Benefits Card */}
+            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <Card className="hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/80 backdrop-blur-sm border-0">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-corporate-grey-dark mb-6 text-center">Why Choose Our {service.title} Service?</h3>
+                  <div className="space-y-4">
+                    {service.benefits.map((benefit, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <div className="w-6 h-6 bg-corporate-blue rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <CheckCircle className="w-4 h-4 text-white" />
+                        </div>
+                        <p className="text-corporate-grey">{benefit}</p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Testimonial Section */}
-      <div className="w-full max-w-3xl bg-gradient-to-r from-blue-100 to-blue-50 rounded-2xl shadow-lg mt-10 p-8 md:p-12 flex flex-col items-center">
-        <h3 className="text-xl md:text-2xl font-semibold text-corporate-blue mb-4 text-center">What Our Clients Say</h3>
-        <blockquote className="italic text-corporate-grey text-lg max-w-2xl text-center mb-2">“SLG Enterprises provided us with outstanding service and reliable staff. Their professionalism and attention to detail exceeded our expectations!”</blockquote>
-        <span className="text-corporate-blue font-bold">— Rajesh Kumar, Premier Energies</span>
-      </div>
-
-      {/* Trusted Clients Logos Row */}
-      <div className="w-full max-w-3xl bg-white rounded-2xl shadow-lg mt-10 p-8 flex flex-col items-center">
-        <h4 className="text-lg font-semibold text-corporate-blue mb-4">Trusted by Industry Leaders</h4>
-        <div className="flex flex-wrap justify-center gap-6">
-          <img src="/images/housekeeping.jpeg" alt="Client 1" className="w-16 h-16 rounded-full object-cover shadow" />
-          <img src="/images/landscaping.jpeg" alt="Client 2" className="w-16 h-16 rounded-full object-cover shadow" />
-          <img src="/images/manpower.jpeg" alt="Client 3" className="w-16 h-16 rounded-full object-cover shadow" />
-          <img src="/images/security.jpeg" alt="Client 4" className="w-16 h-16 rounded-full object-cover shadow" />
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-corporate-grey-dark mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-lg text-corporate-grey">
+              Hear directly from our satisfied clients about their experience
+            </p>
+          </div>
+          
+          <Card className="hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/80 backdrop-blur-sm border-0">
+            <CardContent className="p-8 text-center">
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-corporate-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-white" />
+                </div>
+              </div>
+              <blockquote className="text-xl text-corporate-grey mb-6 italic leading-relaxed">
+                "{service.testimonial.quote}"
+              </blockquote>
+              <div className="text-corporate-blue font-semibold">
+                <div className="text-lg">{service.testimonial.author}</div>
+                <div className="text-sm">{service.testimonial.position}, {service.testimonial.company}</div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
-      </div>
+      </section>
 
-      {/* Footer */}
-      <div className="w-full mt-16">
-        <Footer />
-      </div>
-    </div>
+      {/* Clients Section */}
+      <section className="py-20 bg-gradient-to-br from-white via-blue-50 to-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-corporate-grey-dark mb-4">
+              Trusted by Industry Leaders
+            </h2>
+            <p className="text-lg text-corporate-grey">
+              We're proud to serve leading companies across various sectors
+            </p>
+          </div>
+          
+          <div className="flex overflow-hidden whitespace-nowrap">
+            <div className="flex animate-scroll">
+              {clients.map((client, index) => (
+                <div 
+                  key={index} 
+                  className="flex-shrink-0 mx-8 text-center group transform hover:scale-105 transition-all duration-300 h-56 flex flex-col justify-center"
+                >
+                  <div className="relative">
+                    <div className="w-28 h-28 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-blue-200 transition-all duration-300">
+                      <img 
+                        src={client.logo} 
+                        alt={`${client.name} logo`}
+                        className="w-24 h-24 object-contain transition-transform duration-300"
+                        onError={(e) => {
+                          // Fallback to Building2 icon if logo fails to load
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          const icon = target.nextElementSibling as HTMLElement;
+                          if (icon) icon.style.display = 'block';
+                        }}
+                      />
+                      <Building2 className="h-12 w-12 text-corporate-blue hidden" />
+                    </div>
+                  </div>
+                  <h3 className="font-semibold text-corporate-grey-dark mb-2 text-lg group-hover:text-corporate-blue transition-colors duration-300 leading-tight">
+                    {client.name}
+                  </h3>
+                  <p className="text-sm text-corporate-grey group-hover:text-blue-600 transition-colors duration-300 leading-tight">
+                    {client.industry}
+                  </p>
+                </div>
+              ))}
+              {/* Duplicate clients for seamless loop */}
+              {clients.map((client, index) => (
+                <div 
+                  key={`duplicate-${index}`} 
+                  className="flex-shrink-0 mx-8 text-center group transform hover:scale-105 transition-all duration-300 h-56 flex flex-col justify-center"
+                >
+                  <div className="relative">
+                    <div className="w-28 h-28 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-blue-200 transition-all duration-300">
+                      <img 
+                        src={client.logo} 
+                        alt={`${client.name} logo`}
+                        className="w-24 h-24 object-contain transition-transform duration-300"
+                        onError={(e) => {
+                          // Fallback to Building2 icon if logo fails to load
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          const icon = target.nextElementSibling as HTMLElement;
+                          if (icon) icon.style.display = 'block';
+                        }}
+                      />
+                      <Building2 className="h-12 w-12 text-corporate-blue hidden" />
+                    </div>
+                  </div>
+                  <h3 className="font-semibold text-corporate-grey-dark mb-2 text-lg group-hover:text-corporate-blue transition-colors duration-300 leading-tight">
+                    {client.name}
+                  </h3>
+                  <p className="text-sm text-corporate-grey group-hover:text-blue-600 transition-colors duration-300 leading-tight">
+                    {client.industry}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-corporate-blue via-blue-600 to-corporate-blue-dark text-white relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+            Contact us today to discuss your {service.title.toLowerCase()} requirements and get a customized quote.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-white text-corporate-blue hover:bg-gray-100 font-semibold transform hover:scale-105 hover:shadow-2xl transition-all duration-300 rounded-xl"
+              onClick={() => window.open('https://wa.me/918106206381', '_blank')}
+            >
+              <MessageCircle className="ml-2 h-5 w-5" />
+              Contact on WhatsApp
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-corporate-blue font-semibold transform hover:scale-105 transition-all duration-300 rounded-xl"
+            >
+              <Link to="/contact">
+                Contact Us
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
   );
 };
 

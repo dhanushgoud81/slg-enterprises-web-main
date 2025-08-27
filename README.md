@@ -1,73 +1,105 @@
-# Welcome to your Lovable project
+# SLG Enterprises Website
 
-## Project info
+A modern, responsive website for SLG Enterprises built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/3fea7940-ff42-49d5-9612-19ae380e5a47
+## 🚀 Live Demo
 
-## How can I edit this code?
+Visit the live website: [SLG Enterprises](https://your-username.github.io/slg-enterprises-web/)
 
-There are several ways of editing your application.
+## 🛠️ Technologies Used
 
-**Use Lovable**
+- **React 18** - Modern React with hooks
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - Beautiful UI components
+- **React Router** - Client-side routing
+- **Lucide React** - Beautiful icons
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3fea7940-ff42-49d5-9612-19ae380e5a47) and start prompting.
+## 📦 Installation
 
-Changes made via Lovable will be committed automatically to this repo.
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/slg-enterprises-web.git
+cd slg-enterprises-web
+```
 
-**Use your preferred IDE**
+2. Install dependencies:
+```bash
+npm install
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:8080](http://localhost:8080) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🏗️ Build
 
-**Use GitHub Codespaces**
+To build for production:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+## 🚀 Deployment
 
-This project is built with:
+This project is automatically deployed to GitHub Pages using GitHub Actions.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Manual Deployment Steps:
 
-## How can I deploy this project?
+1. **Create a GitHub Repository**
+   - Go to GitHub and create a new repository named `slg-enterprises-web`
+   - Make sure it's public (required for free GitHub Pages)
 
-Simply open [Lovable](https://lovable.dev/projects/3fea7940-ff42-49d5-9612-19ae380e5a47) and click on Share -> Publish.
+2. **Push Your Code**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/your-username/slg-enterprises-web.git
+   git push -u origin main
+   ```
 
-## Can I connect a custom domain to my Lovable project?
+3. **Enable GitHub Pages**
+   - Go to your repository on GitHub
+   - Navigate to Settings > Pages
+   - Under "Source", select "GitHub Actions"
+   - The workflow will automatically build and deploy your site
 
-Yes, you can!
+4. **Update Repository Name**
+   - If your repository name is different from `slg-enterprises-web`, update the `base` path in `vite.config.ts`
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📁 Project Structure
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Page components
+├── hooks/         # Custom React hooks
+├── lib/           # Utility functions
+└── main.tsx       # App entry point
+```
+
+## 🎨 Features
+
+- **Responsive Design** - Works on all devices
+- **Modern UI** - Clean and professional design
+- **Fast Performance** - Optimized with Vite
+- **SEO Friendly** - Proper meta tags and structure
+- **Accessible** - WCAG compliant components
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License.

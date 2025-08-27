@@ -9,9 +9,9 @@ const WhatsAppFloat = () => {
   return (
     <div
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg cursor-pointer transition-all duration-300 hover:scale-110 animate-bounce"
+      className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 sm:p-3 rounded-full shadow-lg cursor-pointer transition-all duration-300 hover:scale-110 animate-bounce"
     >
-      <MessageCircle size={24} />
+      <MessageCircle size={28} className="sm:w-6 sm:h-6" />
     </div>
   );
 };
