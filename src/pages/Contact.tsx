@@ -98,7 +98,7 @@ const Contact = () => {
                 Contact Us
               </h1>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-                Get in touch with us to discuss your manpower and facility management requirements
+                Ready to transform your business with exceptional manpower solutions? Let's discuss how we can drive your success
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-white to-blue-200 mx-auto rounded-full mt-6"></div>
             </div>
@@ -119,7 +119,7 @@ const Contact = () => {
                 Get In Touch
               </h2>
               <p className="text-lg text-corporate-grey max-w-2xl mx-auto leading-relaxed">
-                We're here to help you with all your staffing and facility management needs
+                Connect with our expert team to explore customized solutions that align with your business objectives and growth strategies
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-corporate-blue to-blue-600 mx-auto rounded-full mt-4"></div>
             </div>

@@ -153,7 +153,7 @@ const Services = () => {
                     <div className="flex flex-col sm:flex-row gap-3 mt-4">
                       <Button
                         asChild
-                        className="flex-1 bg-corporate-blue hover:bg-corporate-blue-dark"
+                        className="flex-1 bg-corporate-blue hover:bg-corporate-blue-dark text-white"
                       >
                         <Link to={service.link}>
                           Learn More <ArrowRight className="ml-2 h-4 w-4" />
@@ -252,72 +252,72 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-corporate-grey-dark mb-6 bg-gradient-to-r from-corporate-blue to-blue-600 bg-clip-text text-transparent">
-              Our Service Process
+              Our Proven Service Process
             </h2>
             <p className="text-lg text-corporate-grey max-w-2xl mx-auto leading-relaxed">
-              Simple, efficient, and transparent process to deliver exceptional services
+              A systematic approach ensuring quality delivery and client satisfaction at every step
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-corporate-blue to-blue-600 mx-auto rounded-full mt-4"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center group">
+            <div className="text-center group cursor-pointer">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-corporate-blue to-blue-600 rounded-full flex items-center justify-center mx-auto text-white text-2xl font-bold shadow-lg group-hover:shadow-2xl transition-all duration-300 transform group-hover:scale-110">
+                <div className="w-20 h-20 bg-gradient-to-br from-corporate-blue to-blue-600 rounded-full flex items-center justify-center mx-auto text-white text-2xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 z-10 relative">
                   1
                 </div>
-                <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
               <h3 className="text-xl font-semibold text-corporate-grey-dark mb-3 group-hover:text-corporate-blue transition-colors duration-300">
-                Consultation
+                Initial Consultation
               </h3>
               <p className="text-corporate-grey leading-relaxed">
-                We understand your requirements and provide customized solutions
+                Comprehensive needs assessment and requirement analysis to understand your business objectives
               </p>
             </div>
 
-            <div className="text-center group">
+            <div className="text-center group cursor-pointer">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-corporate-blue to-blue-600 rounded-full flex items-center justify-center mx-auto text-white text-2xl font-bold shadow-lg group-hover:shadow-2xl transition-all duration-300 transform group-hover:scale-110">
+                <div className="w-20 h-20 bg-gradient-to-br from-corporate-blue to-blue-600 rounded-full flex items-center justify-center mx-auto text-white text-2xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 z-10 relative">
                   2
                 </div>
-                <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
               <h3 className="text-xl font-semibold text-corporate-grey-dark mb-3 group-hover:text-corporate-blue transition-colors duration-300">
-                Planning
+                Strategic Planning
               </h3>
               <p className="text-corporate-grey leading-relaxed">
-                Detailed planning and resource allocation for optimal results
+                Customized service design, resource allocation, and timeline development for optimal outcomes
               </p>
             </div>
 
-            <div className="text-center group">
+            <div className="text-center group cursor-pointer">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-corporate-blue to-blue-600 rounded-full flex items-center justify-center mx-auto text-white text-2xl font-bold shadow-lg group-hover:shadow-2xl transition-all duration-300 transform group-hover:scale-110">
+                <div className="w-20 h-20 bg-gradient-to-br from-corporate-blue to-blue-600 rounded-full flex items-center justify-center mx-auto text-white text-2xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 z-10 relative">
                   3
                 </div>
-                <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
               <h3 className="text-xl font-semibold text-corporate-grey-dark mb-3 group-hover:text-corporate-blue transition-colors duration-300">
-                Implementation
+                Professional Execution
               </h3>
               <p className="text-corporate-grey leading-relaxed">
-                Professional execution with quality control and monitoring
+                Seamless service delivery with real-time quality monitoring and performance tracking
               </p>
             </div>
 
-            <div className="text-center group">
+            <div className="text-center group cursor-pointer">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-corporate-blue to-blue-600 rounded-full flex items-center justify-center mx-auto text-white text-2xl font-bold shadow-lg group-hover:shadow-2xl transition-all duration-300 transform group-hover:scale-110">
+                <div className="w-20 h-20 bg-gradient-to-br from-corporate-blue to-blue-600 rounded-full flex items-center justify-center mx-auto text-white text-2xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 z-10 relative">
                   4
                 </div>
-                <div className="absolute -inset-2 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
               <h3 className="text-xl font-semibold text-corporate-grey-dark mb-3 group-hover:text-corporate-blue transition-colors duration-300">
-                Support
+                Continuous Support
               </h3>
               <p className="text-corporate-grey leading-relaxed">
-                Ongoing support and maintenance for continued excellence
+                24/7 dedicated support, regular maintenance, and continuous improvement initiatives
               </p>
             </div>
           </div>

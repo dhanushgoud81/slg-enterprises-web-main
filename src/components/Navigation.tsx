@@ -57,8 +57,12 @@ const Navigation = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className={`${scrolled ? 'w-8 h-8' : 'w-10 h-10'} bg-gradient-to-br from-corporate-blue to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-2xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                  <Building2 className="h-5 w-5 text-white" />
+                <div className={`${scrolled ? 'w-12 h-12' : 'w-16 h-16'} bg-white rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-2xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 overflow-hidden`}>
+                  <img 
+                    src="/images/companylogo.png" 
+                    alt="SLG Enterprises Logo" 
+                    className={`${scrolled ? 'w-10 h-10' : 'w-14 h-14'} object-contain`}
+                  />
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
               </div>

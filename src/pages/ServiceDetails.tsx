@@ -11,20 +11,20 @@ import ScrollToTop from '../components/ScrollToTop';
 const serviceData = {
   manpower: {
     title: 'Manpower Supply',
-    description: 'Skilled and reliable workforce for your business needs. We provide trained professionals across various industries with comprehensive background verification, skill assessment, and flexible staffing solutions.',
+    description: 'Premium skilled workforce solutions with verified backgrounds and specialized training. We deliver exceptional professionals across diverse industries with comprehensive screening, skill assessment, and flexible staffing options.',
     image: '/images/manpower.jpeg',
-    features: ['Skilled Workers', 'Background Verification', 'Flexible Contracts', 'Industry Expertise', '24/7 Support'],
-    detailedDescription: 'Our manpower supply service is designed to meet the diverse staffing needs of businesses across various industries. We provide pre-screened, trained professionals who are ready to contribute to your organization immediately.',
+    features: ['Expert Professionals', 'Comprehensive Screening', 'Flexible Solutions', 'Industry Specialization', '24/7 Support'],
+    detailedDescription: 'Our premium manpower supply service transforms your staffing challenges into competitive advantages. We provide meticulously screened, industry-trained professionals who seamlessly integrate into your operations, driving productivity and excellence.',
     benefits: [
-      'Reduced hiring time and costs',
-      'Access to pre-trained professionals',
-      'Flexible staffing solutions',
-      'Comprehensive background verification',
-      'Ongoing support and management'
+      'Accelerated hiring with 70% faster onboarding',
+      'Access to pre-vetted, industry-ready professionals',
+      'Scalable staffing solutions for business growth',
+      'Comprehensive background verification and skill assessment',
+      'Continuous performance monitoring and support'
     ],
     industries: ['Manufacturing', 'Healthcare', 'Technology', 'Retail', 'Logistics', 'Construction'],
     testimonial: {
-      quote: "SLG Enterprises has been our trusted partner for manpower supply. Their professional approach and quality staff have significantly contributed to our operational efficiency.",
+      quote: "SLG Enterprises has revolutionized our manpower strategy. Their exceptional professionals and streamlined processes have increased our operational efficiency by 40% while reducing hiring costs significantly.",
       author: "Rajesh Kumar",
       position: "HR Manager",
       company: "Premier Energies"
@@ -241,16 +241,15 @@ const ServiceDetails = () => {
                   <MessageCircle className="ml-2 h-5 w-5" />
                   Get Quote on WhatsApp
                 </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-corporate-blue font-semibold transform hover:scale-105 transition-all duration-300 rounded-xl"
-                >
-                  <Link to="/services">
+                <Link to="/services">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-corporate-blue hover:bg-white hover:text-corporate-blue font-semibold transform hover:scale-105 transition-all duration-300 rounded-xl"
+                  >
                     View All Services
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="relative group">
@@ -362,7 +361,7 @@ const ServiceDetails = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-corporate-grey-dark mb-4">
-              Trusted by Industry Leaders
+              Trusted by Industrys
             </h2>
             <p className="text-lg text-corporate-grey">
               We're proud to serve leading companies across various sectors
@@ -455,16 +454,15 @@ const ServiceDetails = () => {
               <MessageCircle className="ml-2 h-5 w-5" />
               Contact on WhatsApp
             </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-corporate-blue font-semibold transform hover:scale-105 transition-all duration-300 rounded-xl"
-            >
-              <Link to="/contact">
+            <Link to="/contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-corporate-blue hover:bg-white hover:text-corporate-blue font-semibold transform hover:scale-105 transition-all duration-300 rounded-xl"
+              >
                 Contact Us
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

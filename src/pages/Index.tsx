@@ -35,7 +35,7 @@ const Index = () => {
         .animate-scroll {
           animation: scroll 30s linear infinite;
         }
-      }
+      }Trusted by Industry Leaders
     `;
     document.head.appendChild(style);
     
@@ -47,51 +47,51 @@ const Index = () => {
     
     {
       src: "/images/manpower.jpeg",
-      alt: "Manpower Services"
+      alt: "Professional Manpower Supply Services - Skilled Workforce Solutions"
     },
     {
       src: "/images/housekeeping.jpeg",
-      alt: "Housekeeping Services"
+      alt: "Premium Housekeeping Services - Professional Cleaning Solutions"
     },
     {
       src: "/images/security.jpeg",
-      alt: "Security Services"
+      alt: "Corporate Security Services - Professional Security Personnel"
     }
   ];
   const services = [
     {
       title: 'Manpower Supply',
-      description: 'Skilled and reliable workforce for your business needs',
+      description: 'Premium skilled workforce with verified backgrounds and specialized training',
       image: '/images/manpower.jpeg',
       link: '/services/manpower'
     },
     {
       title: 'Landscaping',
-      description: 'Professional garden and outdoor space maintenance',
+      description: 'Transform your outdoor spaces with professional design and maintenance',
       image: '/images/landscaping.jpeg',
       link: '/services/landscaping'
     },
     {
       title: 'Housekeeping',
-      description: 'Comprehensive cleaning and maintenance services',
+      description: 'Immaculate cleaning services with eco-friendly products and protocols',
       image: '/images/housekeeping.jpeg',
       link: '/services/housekeeping'
     },
     {
       title: 'Security',
-      description: 'Trained security personnel for your premises',
+      description: 'Professional security personnel with advanced training and 24/7 monitoring',
       image: '/images/security.jpeg',
       link: '/services/security'
     },
     {
-      title: 'Office Boy',
-      description: 'Administrative support and office assistance',
+      title: 'Office Support',
+      description: 'Efficient administrative assistance and office management solutions',
       image: '/images/office-boy.jpeg',
       link: '/services/office-boy'
     },
     {
-      title: 'Non-Tech Team',
-      description: 'Support staff for various operational needs',
+      title: 'Operational Teams',
+      description: 'Specialized non-technical teams for manufacturing and logistics',
       image: '/images/non-tech.jpeg',
       link: '/services/non-tech'
     }
@@ -100,33 +100,33 @@ const Index = () => {
   const whyChooseUs = [
     {
       icon: <CheckCircle className="h-12 w-12 text-corporate-blue" />,
-      title: 'Reliability',
-      description: 'Consistent and dependable service delivery since 2015 with 500+ satisfied clients'
+      title: 'Proven Excellence',
+      description: '8+ years of consistent delivery with 500+ satisfied clients across diverse industries'
     },
     {
       icon: <Users className="h-12 w-12 text-corporate-blue" />,
-      title: 'Trained Staff',
-      description: 'Well-trained professionals with background verification and industry experience'
+      title: 'Expert Professionals',
+      description: 'Rigorous screening, specialized training, and continuous skill development programs'
     },
     {
       icon: <Shield className="h-12 w-12 text-corporate-blue" />,
-      title: 'Quality Assurance',
-      description: 'Rigorous quality control, regular audits, and adherence to industry standards'
+      title: 'Quality Guaranteed',
+      description: 'ISO-compliant processes with comprehensive quality control and performance monitoring'
     },
     {
       icon: <Clock className="h-12 w-12 text-corporate-blue" />,
-      title: 'Flexible Contracts',
-      description: 'Customizable service packages with short-term and long-term contract options'
+      title: 'Flexible Solutions',
+      description: 'Customized service packages with scalable options for businesses of all sizes'
     },
     {
       icon: <Award className="h-12 w-12 text-corporate-blue" />,
-      title: 'Excellence',
-      description: 'ISO-compliant processes and commitment to delivering exceptional service quality'
+      title: 'Industry Leadership',
+      description: 'Setting benchmarks in manpower solutions with innovative service delivery models'
     },
     {
       icon: <ArrowRight className="h-12 w-12 text-corporate-blue" />,
-      title: '24/7 Support',
-      description: 'Round-the-clock customer support and emergency response services'
+      title: 'Always Available',
+      description: '24/7 dedicated support with rapid response times for urgent requirements'
     }
   ];
 
@@ -192,11 +192,11 @@ const Index = () => {
                 Sri Laxmi Ganapathi Enterprises
               </h1>
               <p className="text-xl md:text-2xl mb-4 text-blue-100 font-light">
-                Reliable Manpower and Maintenance Services Since 2015
+                Premier Manpower & Facility Management Solutions
               </p>
               <p className="text-lg mb-8 text-blue-200 max-w-lg leading-relaxed">
-                Your trusted partner for comprehensive manpower supply, facility management, and maintenance solutions. 
-                We deliver quality services with trained professionals across Hyderabad and Telangana.
+                Empowering businesses with exceptional manpower solutions and comprehensive facility management services. 
+                With 500+ trained professionals and 8+ years of excellence, we're your strategic partner for sustainable growth.
               </p>
               <ul className="space-y-2 mb-8 text-blue-100">
                 <li className="flex items-center gap-2"><CheckCircle className="h-5 w-5 text-emerald-400" /> Background-verified professionals</li>
@@ -288,7 +288,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-corporate-grey-dark mb-6 bg-gradient-to-r from-corporate-blue to-blue-600 bg-clip-text text-transparent">
-              Our Services
+              Comprehensive Manpower & Facility Management Services
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-corporate-blue to-blue-600 mx-auto rounded-full"></div>
           </div>
@@ -388,7 +388,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-corporate-grey-dark mb-6 bg-gradient-to-r from-corporate-blue to-blue-600 bg-clip-text text-transparent">
-              Trusted by Industry Leaders
+              Trusted by Industrys
             </h2>
             <p className="text-lg text-corporate-grey max-w-2xl mx-auto leading-relaxed">
               We're proud to serve leading companies across pharmaceuticals, technology, healthcare, and infrastructure sectors

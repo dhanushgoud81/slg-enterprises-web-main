@@ -72,10 +72,10 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-corporate-grey-dark mb-6 bg-gradient-to-r from-corporate-blue to-indigo-600 bg-clip-text text-transparent">
-              Our Journey
+              Our Journey of Excellence
             </h2>
             <p className="text-lg text-corporate-grey max-w-2xl mx-auto leading-relaxed">
-              From humble beginnings to becoming a trusted partner for enterprises across various industries
+              From a vision to transform manpower services to becoming the preferred partner for 500+ enterprises across diverse industries
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-corporate-blue to-indigo-600 mx-auto rounded-full mt-4"></div>
           </div>
@@ -86,7 +86,7 @@ const About = () => {
               <CardContent className="p-6 text-center">
                 <Target className="h-12 w-12 text-corporate-blue mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-corporate-grey-dark mb-2">Our Mission</h3>
-                <p className="text-corporate-grey">To provide reliable, professional manpower and facility management services that enable our clients to focus on their core business operations.</p>
+                <p className="text-corporate-grey">To empower businesses with exceptional manpower solutions and comprehensive facility management services, enabling them to achieve operational excellence and sustainable growth.</p>
               </CardContent>
             </Card>
             
@@ -94,7 +94,7 @@ const About = () => {
               <CardContent className="p-6 text-center">
                 <Eye className="h-12 w-12 text-corporate-blue mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-corporate-grey-dark mb-2">Our Vision</h3>
-                <p className="text-corporate-grey">To become the leading manpower and facility management service provider in Telangana, known for quality, reliability, and customer satisfaction.</p>
+                <p className="text-corporate-grey">To be the most trusted and innovative manpower solutions partner across South India, setting industry benchmarks for quality, reliability, and customer excellence.</p>
               </CardContent>
             </Card>
             
@@ -102,7 +102,7 @@ const About = () => {
               <CardContent className="p-6 text-center">
                 <User className="h-12 w-12 text-corporate-blue mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-corporate-grey-dark mb-2">Our Values</h3>
-                <p className="text-corporate-grey">Integrity, professionalism, quality, customer focus, and continuous improvement drive everything we do.</p>
+                <p className="text-corporate-grey">Excellence, integrity, innovation, customer-centricity, and continuous improvement form the foundation of our success and growth.</p>
               </CardContent>
             </Card>
           </div>
@@ -185,47 +185,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Founder's Message */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-corporate-grey-dark mb-4">
-              Message from Our Founder
-            </h2>
-          </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <img
-                src="/images/office-boy.jpeg"
-                alt="Founder"
-                className="rounded-lg shadow-xl w-full h-96 object-cover"
-              />
-            </div>
-            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-8">
-                  <div className="flex items-center mb-6">
-                    <User className="h-8 w-8 text-corporate-blue mr-3" />
-                    <h3 className="text-2xl font-semibold text-corporate-grey-dark">Founder & CEO</h3>
-                  </div>
-                  <blockquote className="text-lg text-corporate-grey italic mb-4">
-                    "Since founding Sri Laxmi Ganapathi Enterprises in 2015, our commitment has been 
-                    unwavering - to provide reliable, skilled professionals who become integral parts 
-                    of our clients' success stories. We believe that quality service and human 
-                    excellence go hand in hand."
-                  </blockquote>
-                  <p className="text-lg text-corporate-grey">
-                    Our journey began with a simple belief that every organization deserves access 
-                    to dedicated, trained professionals. Today, we proudly serve diverse industries 
-                    with the same passion and commitment that started it all.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Location Info */}
       <section className="py-20 bg-gradient-to-br from-corporate-blue via-blue-600 to-indigo-700 text-white relative overflow-hidden">
