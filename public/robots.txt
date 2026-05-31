@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://slgenterprises.com/sitemap.xml
+# Sitemap (Fixed Domain)
+Sitemap: https://slg-enterprises.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
