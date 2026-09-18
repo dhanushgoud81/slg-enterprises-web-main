@@ -6,6 +6,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import ScrollToTop from '../components/ScrollToTop';
+import SEO from '@/components/SEO';
 
 const Clients = () => {
   // Add custom CSS for scrolling animation
@@ -81,8 +82,27 @@ const Clients = () => {
     }
   ];
 
+  const clientsSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Our Corporate Clients - SLG Enterprises",
+    "url": "https://slg-enterprises.com/clients",
+    "description": "Read reviews and view the featured corporate partnerships of Sri Laxmi Ganapathi Enterprises with industry leaders in pharmaceuticals, healthcare, and infrastructure.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sri Laxmi Ganapathi Enterprises",
+      "url": "https://slg-enterprises.com"
+    }
+  };
+
   return (
     <>
+      <SEO 
+        title="Our Corporate Clients & Testimonials | SLG Enterprises"
+        description="See the leading corporate clients in pharmaceuticals, solar energy, and infrastructure who trust Sri Laxmi Ganapathi Enterprises for manpower supply and support."
+        keywords="SLG Enterprises clients, manpower partners Hyderabad, Premier Energies, Ramky Group, corporate staffing reviews Telangana"
+        schemaMarkup={clientsSchema}
+      />
       <ScrollToTop />
       <Navigation />
       
@@ -157,7 +177,7 @@ const Clients = () => {
                                 <div className="relative w-full h-32 bg-white rounded-2xl flex items-center justify-center shadow-md border border-gray-100 group-hover:shadow-xl group-hover:border-blue-200 transition-all duration-300">
                                   <img
                                     src={client.logo}
-                                    alt={`${client.name} logo`}
+                                    alt={`${client.name} - Featured corporate client of Sri Laxmi Ganapathi Enterprises`}
                                     className="max-h-16 object-contain"
                                     onError={(e) => {
                                       const target = e.target as HTMLImageElement;
@@ -291,7 +311,7 @@ const Clients = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-corporate-grey-dark mb-6 bg-gradient-to-r from-corporate-blue to-blue-600 bg-clip-text text-transparent">
-              Trusted by Industrys
+              Trusted by Leading Industries
             </h2>
             <p className="text-lg text-corporate-grey max-w-2xl mx-auto leading-relaxed">
               We're proud to serve leading companies across pharmaceuticals, technology, healthcare, and infrastructure sectors
@@ -310,7 +330,7 @@ const Clients = () => {
                     <div className="w-28 h-28 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-blue-200 transition-all duration-300">
                       <img 
                         src={client.logo} 
-                        alt={`${client.name} logo`}
+                        alt={`${client.name} - Trusted client of Sri Laxmi Ganapathi Enterprises`}
                         className="w-24 h-24 object-contain transition-transform duration-300"
                         onError={(e) => {
                           // Fallback to Building2 icon if logo fails to load
@@ -341,7 +361,7 @@ const Clients = () => {
                     <div className="w-28 h-28 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-blue-200 transition-all duration-300">
                       <img 
                         src={client.logo} 
-                        alt={`${client.name} logo`}
+                        alt={`${client.name} logo - Corporate partner`}
                         className="w-24 h-24 object-contain transition-transform duration-300"
                         onError={(e) => {
                           // Fallback to Building2 icon if logo fails to load

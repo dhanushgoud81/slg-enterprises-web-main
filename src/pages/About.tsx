@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import ScrollToTop from '../components/ScrollToTop';
+import SEO from '@/components/SEO';
 
 const About = () => {
   const timeline = [
@@ -35,8 +36,28 @@ const About = () => {
     }
   ];
 
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Sri Laxmi Ganapathi Enterprises",
+    "url": "https://slg-enterprises.com/about",
+    "description": "Learn about our journey since 2015, our mission, vision, values, and how we became a premier manpower and facility management agency in South India.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Sri Laxmi Ganapathi Enterprises",
+      "url": "https://slg-enterprises.com",
+      "logo": "https://slg-enterprises.com/favicon.ico"
+    }
+  };
+
   return (
     <>
+      <SEO 
+        title="About Sri Laxmi Ganapathi Enterprises - Manpower Agency Hyderabad"
+        description="Learn about SLG Enterprises, a premier manpower supply and facility management service provider in Hyderabad since 2015. Our mission, vision, and journey."
+        keywords="about SLG Enterprises, manpower supply history Hyderabad, facility management company Telangana, staffing agency South India"
+        schemaMarkup={aboutSchema}
+      />
       <ScrollToTop />
       <Navigation />
       

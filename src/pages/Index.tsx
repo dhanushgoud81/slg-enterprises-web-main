@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
+import SEO from '@/components/SEO';
 import {
   Carousel,
   CarouselContent,
@@ -168,8 +169,58 @@ const Index = () => {
     return () => clearInterval(interval);
   }, [carouselApi]);
 
+  const homeSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": ["Organization", "LocalBusiness", "EmploymentAgency"],
+      "name": "Sri Laxmi Ganapathi Enterprises",
+      "alternateName": ["SLG Enterprises", "Sri Lakshmi Ganapathi Enterprises"],
+      "url": "https://slg-enterprises.com",
+      "logo": "https://slg-enterprises.com/favicon.ico",
+      "image": "https://slg-enterprises.com/og-image.png",
+      "description": "Premier manpower supply agency and facility management services in Hyderabad & Telangana since 2015. Over 500+ trained professionals serving manufacturing, healthcare, corporate, and IT sectors.",
+      "foundingDate": "2015",
+      "numberOfEmployees": "500+",
+      "telephone": "+91-8106206381",
+      "email": "srilaxmiganapathi80960@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 17.385044,
+        "longitude": 78.486671
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-8106206381",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Telugu", "Hindi"]
+      },
+      "sameAs": [
+        "https://wa.me/918106206381"
+      ],
+      "areaServed": ["Hyderabad", "Secunderabad", "Telangana", "Andhra Pradesh"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Sri Laxmi Ganapathi Enterprises",
+      "url": "https://slg-enterprises.com"
+    }
+  ];
+
   return (
     <>
+      <SEO 
+        title="Sri Laxmi Ganapathi Enterprises - Manpower & Facility Management Hyderabad"
+        description="Leading manpower supply agency and facility management services in Hyderabad & Telangana since 2015. Over 500+ trained professionals. Hire verified staffing solutions."
+        schemaMarkup={homeSchema}
+      />
       <ScrollToTop />
       <Navigation />
       
@@ -388,7 +439,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold text-corporate-grey-dark mb-6 bg-gradient-to-r from-corporate-blue to-blue-600 bg-clip-text text-transparent">
-              Trusted by Industrys
+              Trusted by Leading Industries
             </h2>
             <p className="text-lg text-corporate-grey max-w-2xl mx-auto leading-relaxed">
               We're proud to serve leading companies across pharmaceuticals, technology, healthcare, and infrastructure sectors
@@ -407,7 +458,7 @@ const Index = () => {
                     <div className="w-28 h-28 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-blue-200 transition-all duration-300">
                       <img 
                         src={client.logo} 
-                        alt={`${client.name} logo`}
+                        alt={`${client.name} - Trusted client of Sri Laxmi Ganapathi Enterprises`}
                         className="w-24 h-24 object-contain transition-transform duration-300"
                         onError={(e) => {
                           // Fallback to Building2 icon if logo fails to load
@@ -438,7 +489,7 @@ const Index = () => {
                     <div className="w-28 h-28 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-blue-200 transition-all duration-300">
                       <img 
                         src={client.logo} 
-                        alt={`${client.name} logo`}
+                        alt={`${client.name} logo - Corporate partner`}
                         className="w-24 h-24 object-contain transition-transform duration-300"
                         onError={(e) => {
                           // Fallback to Building2 icon if logo fails to load

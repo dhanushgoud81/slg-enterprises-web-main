@@ -10,6 +10,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import ScrollToTop from '../components/ScrollToTop';
+import SEO from '@/components/SEO';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -61,7 +62,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: 'Email Address',
-      details: ['srilaxmiganapathi80960@gmail.com', 'info@slgenterprises.com'],
+      details: ['srilaxmiganapathi80960@gmail.com'],
       action: () => window.open('mailto:srilaxmiganapathi80960@gmail.com')
     },
     {
@@ -78,8 +79,60 @@ const Contact = () => {
     }
   ];
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Sri Laxmi Ganapathi Enterprises",
+    "alternateName": "SLG Enterprises",
+    "image": "https://slg-enterprises.com/og-image.png",
+    "logo": "https://slg-enterprises.com/favicon.ico",
+    "url": "https://slg-enterprises.com/contact",
+    "telephone": "+91-8106206381",
+    "email": "srilaxmiganapathi80960@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "addressCountry": "India"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 17.3850,
+      "longitude": 78.4867
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "14:00"
+      }
+    ],
+    "sameAs": [
+      "https://wa.me/918106206381"
+    ]
+  };
+
   return (
     <>
+      <SEO 
+        title="Contact Sri Laxmi Ganapathi Enterprises | Get Staffing Quote"
+        description="Contact Sri Laxmi Ganapathi Enterprises for manpower supply and facility management. Call +91-8106206381 or get in touch for custom staffing proposals in Hyderabad."
+        keywords="contact SLG Enterprises, manpower supply contact Hyderabad, hire housekeeping staff Telangana, security guards agency phone number"
+        schemaMarkup={contactSchema}
+      />
       <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Navigation />

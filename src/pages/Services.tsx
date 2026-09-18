@@ -6,6 +6,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import ScrollToTop from '../components/ScrollToTop';
+import SEO from '@/components/SEO';
 
 const Services = () => {
   const services = [
@@ -59,8 +60,27 @@ const Services = () => {
     }
   ];
 
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Manpower & Facility Management Services - SLG Enterprises",
+    "url": "https://slg-enterprises.com/services",
+    "description": "Explore Sri Laxmi Ganapathi Enterprises services: Manpower Supply, Housekeeping, Landscaping, Security Guard services, and Office boy staffing in Hyderabad.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Sri Laxmi Ganapathi Enterprises",
+      "url": "https://slg-enterprises.com"
+    }
+  };
+
   return (
     <>
+      <SEO 
+        title="Manpower Supply & Facility Management Services | Hyderabad"
+        description="Comprehensive facility management and workforce supply services by SLG Enterprises. Professional staffing, office assistance, housekeeping, security, and garden care."
+        keywords="manpower supply Hyderabad, facility management Telangana, housekeeping staffing, security services company, office helper staffing, operational laborers"
+        schemaMarkup={servicesSchema}
+      />
       <ScrollToTop />
       <Navigation />
       

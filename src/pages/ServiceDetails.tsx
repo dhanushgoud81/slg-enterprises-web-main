@@ -7,6 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
+import SEO from '@/components/SEO';
 
 const serviceData = {
   manpower: {
@@ -207,8 +208,44 @@ const ServiceDetails = () => {
     );
   }
 
+  const schemaMarkup = service ? {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": `${service.title} Services`,
+    "serviceType": service.title,
+    "description": service.description,
+    "provider": {
+      "@type": "Organization",
+      "name": "Sri Laxmi Ganapathi Enterprises",
+      "url": "https://slg-enterprises.com",
+      "logo": "https://slg-enterprises.com/favicon.ico"
+    },
+    "areaServed": [
+      {
+        "@type": "AdministrativeArea",
+        "name": "Hyderabad"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Telangana"
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "price": "Contact for pricing",
+      "availability": "https://schema.org/InStock"
+    }
+  } : undefined;
+
   return (
     <>
+      <SEO 
+        title={`${service.title} Services in Hyderabad | SLG Enterprises`}
+        description={`Professional ${service.title.toLowerCase()} services in Hyderabad and Telangana by Sri Laxmi Ganapathi Enterprises. ${service.features.join(', ')}.`}
+        keywords={`${service.title.toLowerCase()} Hyderabad, ${service.title.toLowerCase()} supply Telangana, professional ${service.title.toLowerCase()}, staffing agency`}
+        schemaMarkup={schemaMarkup}
+      />
       <ScrollToTop />
       <Navigation />
       

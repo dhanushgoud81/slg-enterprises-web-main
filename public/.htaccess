@@ -1,6 +1,16 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Redirect www to non-www to prevent duplicate indexation in Google Search Console
+  RewriteCond %{HTTP_HOST} ^www\.slg-enterprises\.com$ [NC]
+  RewriteRule ^(.*)$ https://slg-enterprises.com/$1 [L,R=301]
+
+  # React SPA fallback
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
